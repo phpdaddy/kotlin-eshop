@@ -11,7 +11,7 @@ run configuration `Backend :: Jetty`. This will start serving the REST API of th
 
 ## Frontend
 
-The frontend of KotlinEshop is built using [React](https://facebook.github.io/react/). To adapt the Vue APIs to Kotlin,
+The frontend of KotlinEshop is built using [VueJS](https://vuejs.org/). To adapt the Vue APIs to Kotlin,
 it incorporates a set of wrappers, which
 you can also use in your projects and adapt to your needs.
 
