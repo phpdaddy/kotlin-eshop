@@ -1,28 +1,17 @@
 package com.phpdaddy.kotlineshop
 
-import kotlinx.html.HTML
-import kotlinx.html.body
-import kotlinx.html.h1
-import org.jetbrains.ktor.application.*
-import org.jetbrains.ktor.html.*
-import org.jetbrains.ktor.http.*
-import org.jetbrains.ktor.locations.*
-import org.jetbrains.ktor.response.*
-import org.jetbrains.ktor.routing.*
-import org.jetbrains.ktor.sessions.*
-import java.time.*
+import org.jetbrains.ktor.application.call
+import org.jetbrains.ktor.html.respondHtmlTemplate
+import org.jetbrains.ktor.http.ContentType
+import org.jetbrains.ktor.locations.get
+import org.jetbrains.ktor.routing.Route
+import org.jetbrains.ktor.routing.contentType
 
 fun Route.index() {
     contentType(ContentType.Text.Html) {
         get<Index> {
-            call.respondHtmlTemplate(object : Template<HTML> {
-                override fun HTML.apply() {
-                    body {
-                        h1("Hello")
-                    }
-                }
-
-            }) {
+            call.respondHtmlTemplate(ApplicationPage()) {
+                caption { +"KotlinEshop" }
             }
         }
     }
