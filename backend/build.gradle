@@ -1,4 +1,4 @@
-group = 'org.jetbrains.demo.thinkter'
+group = 'com.phpdaddy.kotlineshop'
 version = '0.0.1-SNAPSHOT'
 
 apply plugin: 'kotlin'
